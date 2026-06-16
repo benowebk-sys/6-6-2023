@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى حبيبتي</title>
+
+    <!-- Google Fonts - Arabic Calligraphy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="heart-loader"></div>
+        <div class="loading-text">...جاري تحميل الحب</div>
+    </div>
+
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-bar" id="navBar">
+        <a href="#hero" class="nav-link">البداية</a>
+        <a href="#gallery" class="nav-link">ذكرياتنا</a>
+        <a href="#music" class="nav-link">أغانينا</a>
+        <a href="#letter" class="nav-link">رسالتي</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">إلى من ملكت قلبي</h1>
+            <p class="hero-subtitle">في كل نبضةٍ من قلبي.. اسمكِ يرنُّ كأجمل لحن</p>
+            <div class="hero-poem">
+                "لو كان الحبُّ كلاماً لكتبتُه بدمي<br>
+                ولو كانَ حبراً لنفذَ من عينيَّ دمعي<br>
+                لكنَّه أعمقُ من الكلامِ والحبرِ<br>
+                إنه أنتِ.. وكلُّ ما فيكِ"
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <h2 class="section-title reveal">ذكرياتنا الجميلة</h2>
+        <div class="gallery-grid">
+            <!-- Photo 1 -->
+            <div class="photo-card reveal">
+                <img src="images/photo1.jpg" alt="صورة 1">
+                <span class="photo-number">01</span>
+                <div class="photo-overlay">
+                    <p class="photo-caption">"أول لقاءٍ جمعنا.. ومنذ ذلك الحين لم تفارقني"</p>
+                </div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="photo-card reveal">
+                <img src="images/photo2.jpeg" alt="صورة 2">
+                <span class="photo-number">02</span>
+                <div class="photo-overlay">
+                    <p class="photo-caption">"عيناكِ نجمتانِ في سماءِ قلبي"</p>
+                </div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="photo-card reveal">
+                <img src="images/photo3.jpeg" alt="صورة 3">
+                <span class="photo-number">03</span>
+                <div class="photo-overlay">
+                    <p class="photo-caption">"كلَّما ابتسمتِ.. ازدهرتِ الحياةُ حولي"</p>
+                </div>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="photo-card reveal">
+                <img src="images/photo4.jpeg" alt="صورة 4">
+                <span class="photo-number">04</span>
+                <div class="photo-overlay">
+                    <p class="photo-caption">"لم يكن الحب حب الا معك "</p>
+                </div>
+            </div>
+
+            <!-- Photo 5 -->
+            <div class="photo-card reveal">
+                <img src="images/photo5.jpeg" alt="صورة 5">
+                <span class="photo-number">05</span>
+                <div class="photo-overlay">
+                    <p class="photo-caption">"معكِ.. كلَّ طريقٍ يصبحُ إلى الجنةِ"</p>
+                </div>
+            </div>
+
+            <!-- Photo 6 -->
+            <div class="photo-card reveal">
+                <img src="images/photo6.jpeg" alt="صورة 6">
+                <span class="photo-number">06</span>
+                <div class="photo-overlay">
+                    <p class="photo-caption">"صمتكِ أجملُ من كلِّ كلامِ العاشقين"</p>
+                </div>
+            </div>
+
+            <!-- Photo 7 -->
+            <div class="photo-card reveal">
+                <img src="images/photo7.jpeg" alt="صورة 7">
+                <span class="photo-number">07</span>
+                <div class="photo-overlay">
+                    <p class="photo-caption">"في حضنكِ.. وجدتُ وطني ودارَ سلامي"</p>
+                </div>
+            </div>
+
+            <!-- Photo 8 -->
+            <div class="photo-card reveal">
+                <img src="images/photo8.jpeg" alt="صورة 8">
+                <span class="photo-number">08</span>
+                <div class="photo-overlay">
+                    <p class="photo-caption">"ثم انك الرفيق الحنون والرفيق المفضل لقلبي"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="music-section" id="music">
+        <h2 class="section-title reveal">أغانينا الخاصة</h2>
+        <div class="music-container">
+            <!-- Song 1 -->
+            <div class="music-card reveal" onclick="togglePlay(this, 'song1')">
+                <div class="music-icon" id="icon-song1"><span class="icon-heart"></span></div>
+                <div class="music-info">
+                    <div class="music-title">أغنيتنا الأولى</div>
+                    <div class="music-artist">دنا منساش دفى حضنك</div>
+                    <div class="visualizer" id="viz-song1">
+                        <div class="visualizer-bar h-8"></div>
+                        <div class="visualizer-bar h-15"></div>
+                        <div class="visualizer-bar h-10"></div>
+                        <div class="visualizer-bar h-20"></div>
+                        <div class="visualizer-bar h-12"></div>
+                        <div class="visualizer-bar h-18"></div>
+                        <div class="visualizer-bar h-8"></div>
+                    </div>
+                </div>
+                <div class="music-duration">03:45</div>
+                <button class="play-btn" id="btn-song1">▶</button>
+                <audio id="song1" src="audio/au1.mp3"></audio>
+            </div>
+
+            <!-- Song 2 -->
+            <div class="music-card reveal" onclick="togglePlay(this, 'song2')">
+                <div class="music-icon" id="icon-song2"><span class="icon-heart"></span></div>
+                <div class="music-info">
+                    <div class="music-title">أغنيتنا الثانية</div>
+                    <div class="music-artist">العين بعدك لم تنظر الي حسن</div>
+                    <div class="visualizer" id="viz-song2">
+                        <div class="visualizer-bar h-10"></div>
+                        <div class="visualizer-bar h-8"></div>
+                        <div class="visualizer-bar h-18"></div>
+                        <div class="visualizer-bar h-12"></div>
+                        <div class="visualizer-bar h-20"></div>
+                        <div class="visualizer-bar h-15"></div>
+                        <div class="visualizer-bar h-10"></div>
+                    </div>
+                </div>
+                <div class="music-duration">04:12</div>
+                <button class="play-btn" id="btn-song2">▶</button>
+                <audio id="song2" src="audio/au2.mp3"></audio>
+            </div>
+
+            <!-- Song 3 -->
+            <div class="music-card reveal" onclick="togglePlay(this, 'song3')">
+                <div class="music-icon" id="icon-song3"><span class="icon-heart"></span></div>
+                <div class="music-info">
+                    <div class="music-title">أغنيتنا الثالثة</div>
+                    <div class="music-artist">سررت فى العمر مره </div>
+                    <div class="visualizer" id="viz-song3">
+                        <div class="visualizer-bar h-15"></div>
+                        <div class="visualizer-bar h-20"></div>
+                        <div class="visualizer-bar h-8"></div>
+                        <div class="visualizer-bar h-12"></div>
+                        <div class="visualizer-bar h-18"></div>
+                        <div class="visualizer-bar h-10"></div>
+                        <div class="visualizer-bar h-15"></div>
+                    </div>
+                </div>
+                <div class="music-duration">03:28</div>
+                <button class="play-btn" id="btn-song3">▶</button>
+                <audio id="song3" src="audio/au3.mp3"></audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="letter-section" id="letter">
+        <h2 class="section-title reveal">رسالتي إليكِ</h2>
+        <div class="letter-container reveal">
+            <p class="letter-text">
+                حبيبتي،<br><br>
+                عارفه قبل ما تدخلي حياتى كنت فاكر 
+                ان القوى هى اني اكون لوحدى ومش محتاج لحد بس لما عرفتك
+                فهمت ان القوة الحقيقيه هى اني الاقي القلب اللي يسندني واسنده
+                انتى الوحيده الى قدرتى تكسري كل حواجزى برقتك وتخليني اطمن
+                وانا معاكي كاني طفل صغير فى حضن امه بحب انك بتفهميني من غير ما انطق وبحب انك ديما 
+                بتعرفى تطلعيني من اى حاله وحشه بكلمه واحده 
+                انتي مش بس حبيبتى انتى نصيبي الحلو اللي ربنا شايلهولي
+                علشان يعوضنى بيه عن كل الي فات بحبك
+
+            
+            </p>
+            <div class="letter-signature">
+                مع كلِّ حبي،<br>
+                [بيبو حبيبك]
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">صُنع بكلِّ حبٍّ لاجلك ريم</p>
+        <div class="footer-hearts">
+            <span class="footer-heart"></span>
+            <span class="footer-heart"></span>
+            <span class="footer-heart"></span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
